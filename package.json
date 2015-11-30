@@ -1,0 +1,27 @@
+{
+  "name": "ember-cli-deploy-yapp-pack",
+  "version": "1.0.0",
+  "description": "A pack of ember-cli-deploy plugins for deploying Yapp's Ember apps.",
+  "scripts": {},
+  "repository": "https://github.com/yappbox/ember-cli-deploy-yapp-pack",
+  "engines": {
+    "node": ">= 0.10.0"
+  },
+  "author": "Luke Melia and the Yapp team",
+  "license": "MIT",
+  "devDependencies": {
+    "ember-cli": "0.2.7",
+    "ember-cli-release": "0.2.6"
+  },
+  "keywords": [
+    "ember-addon",
+    "ember-cli-deploy-plugin-pack"
+  ],
+  "dependencies": {
+    "ember-cli-deploy-lightning-pack": "0.2.0",
+    "ember-cli-deploy-slack": "0.0.3"
+  },
+  "ember-addon": {
+    "defaultBlueprint": "yapp-deploy-config"
+  }
+}
