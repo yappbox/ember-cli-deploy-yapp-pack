@@ -22,7 +22,8 @@ module.exports = {
       keyPrefix: prefix + ':index'
     };
     ENV.s3 = {
-      prefix: prefix
+      prefix: prefix,
+      region: 'us-east-1'
     };
     ENV.slack = {
       webhookURL: process.env.YAPP_SLACK_TECH_CHANNEL_WEBHOOK,
