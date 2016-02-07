@@ -18,8 +18,8 @@
     "ember-cli-deploy-plugin-pack"
   ],
   "dependencies": {
-    "ember-cli-deploy-lightning-pack": "0.3.0",
-    "ember-cli-deploy-slack": "0.0.3"
+    "ember-cli-deploy-lightning-pack": "0.4.0",
+    "ember-cli-deploy-slack": "0.1.0"
   },
   "ember-addon": {
     "defaultBlueprint": "yapp-deploy-config"
