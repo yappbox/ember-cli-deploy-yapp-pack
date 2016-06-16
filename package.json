@@ -18,7 +18,7 @@
     "ember-cli-deploy-plugin-pack"
   ],
   "dependencies": {
-    "ember-cli-deploy-lightning-pack": "0.6.1",
+    "ember-cli-deploy-lightning-pack": "0.6.4",
     "ember-cli-deploy-slack": "0.1.0"
   },
   "ember-addon": {
