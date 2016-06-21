@@ -43,11 +43,16 @@ module.exports = {
     }
 
     if (deployTarget === 'devindex') {
-      ENV.build.environment = 'devindex';
-      ENV.redis.distDir = 'dist';
+      ENV.pipeline = {
+        activateOnDeploy: true
+      };
+      ENV.build.environment = 'development';
+      ENV.redis.distDir = function(context) {
+        return context.commandOptions.buildDir || 'dist';
+      };
       ENV.redis.revisionKey = 'dev';
       ENV.redis.url = process.env.YAPP_REDIS_URL_DEVELOPMENT || 'redis://0.0.0.0:6379/';
-      ENV.plugins = ['redis']; // special case to support `npm run dev:index`
+      ENV.plugins = ['redis']; // special case to support postBuild and `npm run dev:index` usage
     }
 
     var domain;
