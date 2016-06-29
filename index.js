@@ -14,9 +14,7 @@ module.exports = {
     ];
     var ENV = {};
     ENV.build = {};
-    ENV.gzip = {
-      zopfli: true
-    };
+    ENV.gzip = {};
     ENV.redis = {
       allowOverwrite: true,
       keyPrefix: prefix + ':index'
