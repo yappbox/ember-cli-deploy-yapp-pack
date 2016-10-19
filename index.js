@@ -28,6 +28,7 @@ module.exports = {
       didDeploy:function(){},
       didFail:function(){}
     };
+    ENV.pipeline = {};
 
     if (VALID_DEPLOY_TARGETS.indexOf(deployTarget) === -1) {
       throw new Error('Invalid deployTarget ' + deployTarget);
@@ -37,20 +38,22 @@ module.exports = {
       ENV.build.environment = 'development';
       ENV.redis.revisionKey = 'dev';
       ENV.redis.url = process.env.YAPP_REDIS_URL_DEVELOPMENT || 'redis://0.0.0.0:6379/';
-      ENV.plugins = ['build', 'redis']; // only redis in dev
+      ENV.pipeline.disabled = {
+        allExcept: ['build', 'redis']
+      };
     }
 
     if (deployTarget === 'devindex') {
-      ENV.pipeline = {
-        activateOnDeploy: true
-      };
+      ENV.pipeline.activateOnDeploy = true;
       ENV.build.environment = 'development';
       ENV.redis.distDir = function(context) {
         return context.commandOptions.buildDir || 'dist';
       };
       ENV.redis.revisionKey = 'dev';
       ENV.redis.url = process.env.YAPP_REDIS_URL_DEVELOPMENT || 'redis://0.0.0.0:6379/';
-      ENV.plugins = ['redis']; // special case to support postBuild and `npm run dev:index` usage
+      ENV.pipeline.disabled = { // special case to support postBuild and `npm run dev:index` usage
+        allExcept: ['redis']
+      };
     }
 
     var domain;
