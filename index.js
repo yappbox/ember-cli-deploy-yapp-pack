@@ -85,7 +85,7 @@ module.exports = {
                  + "Preview: https://" + domain + "/" + prefix + "/?manifest_id=" + revisionKey + "\n"
                  + "Activate: `ember deploy:activate " + process.env.DEPLOY_TARGET + ' --revision='+ revisionKey + "`\n";
           } else {
-            message = 'Deployed and activated ' + appName + ' to ' + process.env.DEPLOY_TARGET + ' (revision ' + revisionKey + ')';
+            message = '*' + appName + ' > *' + process.env.DEPLOY_TARGET + '* -- _Deployed & activated_ -- (revision: `' + revisionKey + '`)';
           }
           return slack.notify(message);
         };
