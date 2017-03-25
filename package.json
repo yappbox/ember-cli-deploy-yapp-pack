@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-deploy-yapp-pack",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "A pack of ember-cli-deploy plugins for deploying Yapp's Ember apps.",
   "scripts": {},
   "repository": "https://github.com/yappbox/ember-cli-deploy-yapp-pack",
