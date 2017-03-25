@@ -1,10 +1,9 @@
-/* jshint node: true */
 'use strict';
 
 module.exports = {
   name: 'ember-cli-deploy-yapp-pack',
   getConfiguration: function(prefix, appName, deployTarget) {
-    var Promise = require('ember-cli/lib/ext/promise');
+    var RSVP = require('rsvp');
 
     var VALID_DEPLOY_TARGETS = [
       'dev',
@@ -110,10 +109,10 @@ module.exports = {
       };
     }
 
-    return Promise.resolve().then(function(){
+    return RSVP.resolve().then(function(){
       if (deployTarget === 'qa' || deployTarget === 'prod') {
         if (!ENV.redis.url || ENV.redis.url === '') {
-          return new Promise(function(resolve, reject){
+          return new RSVP.Promise(function(resolve, reject){
             var exec = require('child_process').exec;
             exec('heroku config:get REDISTOGO_URL --app ' + herokuAppName, function (error, stdout, stderr) {
               ENV.redis.url = stdout.replace(/\n/, '').replace(/\/\/redistogo:/, '//:');
