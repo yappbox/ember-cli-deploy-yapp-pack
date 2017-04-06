@@ -23,17 +23,13 @@ acorn-jsx@^3.0.0:
   dependencies:
     acorn "^3.0.4"
 
-acorn@4.0.4:
+acorn@4.0.4, acorn@^4.0.3:
   version "4.0.4"
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-4.0.4.tgz#17a8d6a7a6c4ef538b814ec9abac2779293bf30a"
 
 acorn@^3.0.4:
   version "3.3.0"
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-3.3.0.tgz#45e37fb39e8da3f25baee3ff5369e2bb5f22017a"
-
-acorn@^4.0.3:
-  version "4.0.11"
-  resolved "https://registry.yarnpkg.com/acorn/-/acorn-4.0.11.tgz#edcda3bd937e7556410d42ed5860f67399c794c0"
 
 after@0.8.1:
   version "0.8.1"
@@ -1370,18 +1366,18 @@ ember-cli-broccoli-sane-watcher@^2.0.4:
     rsvp "^3.0.18"
     sane "^1.1.1"
 
-ember-cli-deploy-build@1.0.0-beta.0:
-  version "1.0.0-beta.0"
-  resolved "https://registry.yarnpkg.com/ember-cli-deploy-build/-/ember-cli-deploy-build-1.0.0-beta.0.tgz#7e646b8f302c44a6cad530e006694a3fe0232dd7"
+ember-cli-deploy-build@1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/ember-cli-deploy-build/-/ember-cli-deploy-build-1.0.0.tgz#b5b938ad907c6423df39590a804e98d4eb87259b"
   dependencies:
     chalk "^1.0.0"
     ember-cli-deploy-plugin "^0.2.1"
     glob "^7.1.1"
     rsvp "^3.5.0"
 
-ember-cli-deploy-display-revisions@1.0.0-beta.0:
-  version "1.0.0-beta.0"
-  resolved "https://registry.yarnpkg.com/ember-cli-deploy-display-revisions/-/ember-cli-deploy-display-revisions-1.0.0-beta.0.tgz#f1b70c5f46896510e84f0e7f2a322410c9341195"
+ember-cli-deploy-display-revisions@1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/ember-cli-deploy-display-revisions/-/ember-cli-deploy-display-revisions-1.0.0.tgz#72ad8cf74d94e996ae0a52cd1403fd9195db38df"
   dependencies:
     cli-table2 "^0.2.0"
     core-object "^2.0.0"
@@ -1389,9 +1385,9 @@ ember-cli-deploy-display-revisions@1.0.0-beta.0:
     moment "^2.18.0"
     rsvp "^3.5.0"
 
-ember-cli-deploy-gzip@1.0.0-beta.0:
-  version "1.0.0-beta.0"
-  resolved "https://registry.yarnpkg.com/ember-cli-deploy-gzip/-/ember-cli-deploy-gzip-1.0.0-beta.0.tgz#5fe8e2a671154e7fc28b71948e2a2344fe3e0b47"
+ember-cli-deploy-gzip@1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/ember-cli-deploy-gzip/-/ember-cli-deploy-gzip-1.0.0.tgz#32b6fcc96ed6d571ad4e5b0c08e53e93d717347f"
   dependencies:
     chalk "^1.1.3"
     core-object "^2.0.6"
@@ -1399,21 +1395,21 @@ ember-cli-deploy-gzip@1.0.0-beta.0:
     minimatch "^3.0.3"
     rsvp "^3.5.0"
 
-ember-cli-deploy-lightning-pack@^1.0.0-beta.0:
-  version "1.0.0-beta.0"
-  resolved "https://registry.yarnpkg.com/ember-cli-deploy-lightning-pack/-/ember-cli-deploy-lightning-pack-1.0.0-beta.0.tgz#0eb651c30b914706b4ba381cd1fd875241c3dda8"
+ember-cli-deploy-lightning-pack@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/ember-cli-deploy-lightning-pack/-/ember-cli-deploy-lightning-pack-1.0.0.tgz#4b59768c216d84ee2c6c6e8afa5f94ce010c7372"
   dependencies:
-    ember-cli-deploy-build "1.0.0-beta.0"
-    ember-cli-deploy-display-revisions "1.0.0-beta.0"
-    ember-cli-deploy-gzip "1.0.0-beta.0"
-    ember-cli-deploy-manifest "1.0.0-beta.0"
-    ember-cli-deploy-redis "1.0.0-beta.1"
-    ember-cli-deploy-revision-data "1.0.0-beta.0"
-    ember-cli-deploy-s3 "1.0.0-beta.0"
+    ember-cli-deploy-build "1.0.0"
+    ember-cli-deploy-display-revisions "1.0.0"
+    ember-cli-deploy-gzip "1.0.0"
+    ember-cli-deploy-manifest "1.0.0"
+    ember-cli-deploy-redis "1.0.0"
+    ember-cli-deploy-revision-data "1.0.0"
+    ember-cli-deploy-s3 "1.0.0"
 
-ember-cli-deploy-manifest@1.0.0-beta.0:
-  version "1.0.0-beta.0"
-  resolved "https://registry.yarnpkg.com/ember-cli-deploy-manifest/-/ember-cli-deploy-manifest-1.0.0-beta.0.tgz#b341174d79e0bb9fe40219032e1789e7dc6d372c"
+ember-cli-deploy-manifest@1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/ember-cli-deploy-manifest/-/ember-cli-deploy-manifest-1.0.0.tgz#47ea079f8db4c94bc44b652762320cdc4cc781e7"
   dependencies:
     chalk "^1.0.0"
     core-object "^2.0.0"
@@ -1429,9 +1425,9 @@ ember-cli-deploy-plugin@^0.2.1, ember-cli-deploy-plugin@^0.2.2, ember-cli-deploy
     core-object "2.0.6"
     lodash.clonedeep "^4.5.0"
 
-ember-cli-deploy-redis@1.0.0-beta.1:
-  version "1.0.0-beta.1"
-  resolved "https://registry.yarnpkg.com/ember-cli-deploy-redis/-/ember-cli-deploy-redis-1.0.0-beta.1.tgz#f5be48c7385292190b2d0ac7d51c3e820f523bc1"
+ember-cli-deploy-redis@1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/ember-cli-deploy-redis/-/ember-cli-deploy-redis-1.0.0.tgz#4ce609fc2eda8f23dde1c2abb5e3bf7ab399619f"
   dependencies:
     chalk "^1.1.3"
     core-object "^2.0.6"
@@ -1440,9 +1436,9 @@ ember-cli-deploy-redis@1.0.0-beta.1:
     rsvp "^3.0.18"
     then-redis "^2.0.1"
 
-ember-cli-deploy-revision-data@1.0.0-beta.0:
-  version "1.0.0-beta.0"
-  resolved "https://registry.yarnpkg.com/ember-cli-deploy-revision-data/-/ember-cli-deploy-revision-data-1.0.0-beta.0.tgz#9ca34f31a455286f6724f6ab1ec73cb6e045221a"
+ember-cli-deploy-revision-data@1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/ember-cli-deploy-revision-data/-/ember-cli-deploy-revision-data-1.0.0.tgz#e870abc79f25bc96fe5532fec41baa9e1bc3ccc6"
   dependencies:
     chalk "^1.1.3"
     core-object "^2.0.6"
@@ -1452,9 +1448,9 @@ ember-cli-deploy-revision-data@1.0.0-beta.0:
     rsvp "^3.5.0"
     simple-git "^1.57.0"
 
-ember-cli-deploy-s3@1.0.0-beta.0:
-  version "1.0.0-beta.0"
-  resolved "https://registry.yarnpkg.com/ember-cli-deploy-s3/-/ember-cli-deploy-s3-1.0.0-beta.0.tgz#9e5fa1a0d416ded166c2a67c2c5459fbd68b6164"
+ember-cli-deploy-s3@1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/ember-cli-deploy-s3/-/ember-cli-deploy-s3-1.0.0.tgz#c83c765de45fd5b591cb80fa1889f4d0e7534a61"
   dependencies:
     aws-sdk "^2.6.12"
     chalk "^1.0.0"
@@ -1466,9 +1462,9 @@ ember-cli-deploy-s3@1.0.0-beta.0:
     proxy-agent "^2.0.0"
     rsvp "^3.5.0"
 
-ember-cli-deploy-slack@^1.0.0-beta.0:
-  version "1.0.0-beta.0"
-  resolved "https://registry.yarnpkg.com/ember-cli-deploy-slack/-/ember-cli-deploy-slack-1.0.0-beta.0.tgz#39bb700273779e6ee646d13e8b59650ad7954913"
+ember-cli-deploy-slack@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/ember-cli-deploy-slack/-/ember-cli-deploy-slack-1.0.0.tgz#b7449ffa2c568bbed0db0a9afc99274af01f749e"
   dependencies:
     chalk "^1.0.0"
     core-object "^2.0.0"
@@ -3560,17 +3556,13 @@ minimatch@^2.0.1, minimatch@^2.0.3:
   dependencies:
     brace-expansion "^1.0.0"
 
-minimist@0.0.8:
+minimist@0.0.8, minimist@~0.0.1:
   version "0.0.8"
   resolved "https://registry.yarnpkg.com/minimist/-/minimist-0.0.8.tgz#857fcabfc3397d2625b8228262e86aa7a011b05d"
 
 minimist@^1.1.0, minimist@^1.1.1:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/minimist/-/minimist-1.2.0.tgz#a35008b20f41383eec1fb914f4cd5df79a264284"
-
-minimist@~0.0.1:
-  version "0.0.10"
-  resolved "https://registry.yarnpkg.com/minimist/-/minimist-0.0.10.tgz#de3f98543dbf96082be48ad1a0c7cda836301dcf"
 
 mkdirp@0.5.x, "mkdirp@>=0.5 0", mkdirp@^0.5.0, mkdirp@^0.5.1, mkdirp@~0.5.0, mkdirp@~0.5.1:
   version "0.5.1"
@@ -4307,10 +4299,11 @@ read@1, read@~1.0.1, read@~1.0.7:
   dependencies:
     mute-stream "~0.0.4"
 
-"readable-stream@1 || 2", readable-stream@^2, "readable-stream@^2.0.0 || ^1.1.13", readable-stream@^2.0.2, readable-stream@~2.0.5:
-  version "2.0.6"
-  resolved "https://registry.yarnpkg.com/readable-stream/-/readable-stream-2.0.6.tgz#8f90341e68a53ccc928788dacfcd11b36eb9b78e"
+"readable-stream@1 || 2", readable-stream@2, readable-stream@^2, "readable-stream@^2.0.0 || ^1.1.13", readable-stream@^2.0.2, readable-stream@^2.2.2:
+  version "2.2.6"
+  resolved "https://registry.yarnpkg.com/readable-stream/-/readable-stream-2.2.6.tgz#8b43aed76e71483938d12a8d46c6cf1a00b1f816"
   dependencies:
+    buffer-shims "^1.0.0"
     core-util-is "~1.0.0"
     inherits "~2.0.1"
     isarray "~1.0.0"
@@ -4327,18 +4320,6 @@ readable-stream@1.1.x:
     isarray "0.0.1"
     string_decoder "~0.10.x"
 
-readable-stream@2, readable-stream@^2.2.2:
-  version "2.2.6"
-  resolved "https://registry.yarnpkg.com/readable-stream/-/readable-stream-2.2.6.tgz#8b43aed76e71483938d12a8d46c6cf1a00b1f816"
-  dependencies:
-    buffer-shims "^1.0.0"
-    core-util-is "~1.0.0"
-    inherits "~2.0.1"
-    isarray "~1.0.0"
-    process-nextick-args "~1.0.6"
-    string_decoder "~0.10.x"
-    util-deprecate "~1.0.1"
-
 readable-stream@~1.0.2:
   version "1.0.34"
   resolved "https://registry.yarnpkg.com/readable-stream/-/readable-stream-1.0.34.tgz#125820e34bc842d2f2aaafafe4c2916ee32c157c"
@@ -4347,6 +4328,17 @@ readable-stream@~1.0.2:
     inherits "~2.0.1"
     isarray "0.0.1"
     string_decoder "~0.10.x"
+
+readable-stream@~2.0.5:
+  version "2.0.6"
+  resolved "https://registry.yarnpkg.com/readable-stream/-/readable-stream-2.0.6.tgz#8f90341e68a53ccc928788dacfcd11b36eb9b78e"
+  dependencies:
+    core-util-is "~1.0.0"
+    inherits "~2.0.1"
+    isarray "~1.0.0"
+    process-nextick-args "~1.0.6"
+    string_decoder "~0.10.x"
+    util-deprecate "~1.0.1"
 
 readdir-scoped-modules@^1.0.0:
   version "1.0.2"
@@ -4474,7 +4466,32 @@ repeating@^1.1.0, repeating@^1.1.2:
   dependencies:
     is-finite "^1.0.0"
 
-request@2, request@^2.47.0, request@^2.72.0:
+request@2, request@^2.47.0, request@~2.67.0:
+  version "2.67.0"
+  resolved "https://registry.yarnpkg.com/request/-/request-2.67.0.tgz#8af74780e2bf11ea0ae9aa965c11f11afd272742"
+  dependencies:
+    aws-sign2 "~0.6.0"
+    bl "~1.0.0"
+    caseless "~0.11.0"
+    combined-stream "~1.0.5"
+    extend "~3.0.0"
+    forever-agent "~0.6.1"
+    form-data "~1.0.0-rc3"
+    har-validator "~2.0.2"
+    hawk "~3.1.0"
+    http-signature "~1.1.0"
+    is-typedarray "~1.0.0"
+    isstream "~0.1.2"
+    json-stringify-safe "~5.0.1"
+    mime-types "~2.1.7"
+    node-uuid "~1.4.7"
+    oauth-sign "~0.8.0"
+    qs "~5.2.0"
+    stringstream "~0.0.4"
+    tough-cookie "~2.2.0"
+    tunnel-agent "~0.4.1"
+
+request@^2.72.0:
   version "2.81.0"
   resolved "https://registry.yarnpkg.com/request/-/request-2.81.0.tgz#c6928946a0e06c5f8d6f8a9333469ffda46298a0"
   dependencies:
@@ -4500,31 +4517,6 @@ request@2, request@^2.47.0, request@^2.72.0:
     tough-cookie "~2.3.0"
     tunnel-agent "^0.6.0"
     uuid "^3.0.0"
-
-request@~2.67.0:
-  version "2.67.0"
-  resolved "https://registry.yarnpkg.com/request/-/request-2.67.0.tgz#8af74780e2bf11ea0ae9aa965c11f11afd272742"
-  dependencies:
-    aws-sign2 "~0.6.0"
-    bl "~1.0.0"
-    caseless "~0.11.0"
-    combined-stream "~1.0.5"
-    extend "~3.0.0"
-    forever-agent "~0.6.1"
-    form-data "~1.0.0-rc3"
-    har-validator "~2.0.2"
-    hawk "~3.1.0"
-    http-signature "~1.1.0"
-    is-typedarray "~1.0.0"
-    isstream "~0.1.2"
-    json-stringify-safe "~5.0.1"
-    mime-types "~2.1.7"
-    node-uuid "~1.4.7"
-    oauth-sign "~0.8.0"
-    qs "~5.2.0"
-    stringstream "~0.0.4"
-    tough-cookie "~2.2.0"
-    tunnel-agent "~0.4.1"
 
 require-dir@^0.3.0:
   version "0.3.1"
