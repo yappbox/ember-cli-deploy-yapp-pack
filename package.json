@@ -19,7 +19,7 @@
     "ember-cli-deploy-plugin-pack"
   ],
   "dependencies": {
-    "ember-cli-deploy-lightning-pack": "^1.0.0",
+    "ember-cli-deploy-lightning-pack": "^1.1.0",
     "ember-cli-deploy-slack": "^1.0.0",
     "rsvp": "^3.5.0"
   },
