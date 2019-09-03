@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = {
-  name: 'ember-cli-deploy-yapp-pack',
+  name: require('./package').name,
   getConfiguration: function(prefix, appName, deployTarget) {
     var RSVP = require('rsvp');
 
