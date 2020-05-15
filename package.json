@@ -3,21 +3,17 @@
   "version": "3.0.0",
   "description": "A pack of ember-cli-deploy plugins for deploying Yapp's Ember apps.",
   "scripts": {
-    "lint:js": "eslint ."
+    "lint:js": "eslint .",
+    "release": "release-it"
   },
   "engines": {
-    "node": "8.* || >= 10.*"
+    "node": ">= 10.*"
   },
   "devDependencies": {
-    "@ember/optional-features": "^0.7.0",
-    "ember-cli": "~3.12.0",
-    "ember-cli-release-tag": "^0.1.5",
-    "ember-maybe-import-regenerator": "^0.1.6",
-    "ember-qunit": "^4.4.1",
-    "ember-source-channel-url": "^1.1.0",
-    "eslint": "^6.2.0",
-    "eslint-plugin-ember": "^6.2.0",
-    "eslint-plugin-node": "^9.0.1"
+    "auto-changelog": "^2.0.0",
+    "ember-cli": "~3.18.0",
+    "eslint": "^7.0.0",
+    "release-it": "*"
   },
   "keywords": [
     "ember-addon",
@@ -27,11 +23,23 @@
   "license": "MIT",
   "author": "Luke Melia and the Yapp team",
   "dependencies": {
-    "ember-cli-deploy-lightning-pack": "^2.0.0",
+    "ember-cli-deploy-lightning-pack": "^3.0.0",
     "ember-cli-deploy-slack": "^1.0.0",
-    "rsvp": "^3.5.0"
+    "rsvp": "^4.8.5"
   },
   "ember-addon": {
     "defaultBlueprint": "yapp-deploy-config"
+  },
+  "release-it": {
+    "hooks": {
+      "after:bump": "npx auto-changelog -p"
+    },
+    "git": {
+      "changelog": "npx auto-changelog --stdout --commit-limit false --unreleased --template https://raw.githubusercontent.com/release-it/release-it/master/templates/changelog-compact.hbs",
+      "requireCleanWorkingDir": false
+    },
+    "github": {
+      "release": true
+    }
   }
 }
