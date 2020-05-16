@@ -1,3 +1,11 @@
+## v4.0.1 (2020-05-16)
+
+#### :house: Internal
+* [#6](https://github.com/yappbox/ember-cli-deploy-yapp-pack/pull/6) Update release-it setup ([@lukemelia](https://github.com/lukemelia))
+
+#### Committers: 1
+- Luke Melia ([@lukemelia](https://github.com/lukemelia))
+
 ### Changelog
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
