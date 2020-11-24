@@ -31,6 +31,9 @@
   "ember-addon": {
     "defaultBlueprint": "yapp-deploy-config"
   },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
   "release-it": {
     "git": {
       "tagName": "v${version}",
