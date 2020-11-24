@@ -1,3 +1,14 @@
+## v5.0.0 (2020-11-24)
+
+#### :rocket: Enhancement
+* [#7](https://github.com/yappbox/ember-cli-deploy-yapp-pack/pull/7) Update ember-cli-deploy-lightning pack to 4.0.0 ([@lukemelia](https://github.com/lukemelia))
+
+#### :house: Internal
+* [#8](https://github.com/yappbox/ember-cli-deploy-yapp-pack/pull/8) Update dependencies ([@lukemelia](https://github.com/lukemelia))
+
+#### Committers: 1
+- Luke Melia ([@lukemelia](https://github.com/lukemelia))
+
 ## v4.0.1 (2020-05-16)
 
 #### :house: Internal
