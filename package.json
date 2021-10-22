@@ -14,7 +14,7 @@
     "eslint": "^8.0.1",
     "lerna-changelog": "^2.2.0",
     "release-it": "14.11.6",
-    "release-it-lerna-changelog": "^4.0.0"
+    "release-it-lerna-changelog": "^3.1.0"
   },
   "keywords": [
     "ember-addon",
