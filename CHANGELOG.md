@@ -1,4 +1,13 @@
 
+
+## v6.2.0 (2021-10-22)
+
+#### :rocket: Enhancement
+* [#11](https://github.com/yappbox/ember-cli-deploy-yapp-pack/pull/11) Don't error on invalid redis cert chain ([@lukemelia](https://github.com/lukemelia))
+
+#### Committers: 1
+- Luke Melia ([@lukemelia](https://github.com/lukemelia))
+
 ## v6.1.0 (2021-10-22)
 
 #### :rocket: Enhancement
