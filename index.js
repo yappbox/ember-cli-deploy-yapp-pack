@@ -59,14 +59,14 @@ module.exports = {
     var herokuAppName;
     if (deployTarget === 'qa') {
       ENV.s3.bucket = 'yapp-assets';
-      ENV.redis.url = process.env.REDISTOGO_URL; // optional, falls back to reading from heroku below
+      ENV.redis.url = process.env.REDIS_URL; // optional, falls back to reading from heroku below
       domain = "www.yappqa.us";
       herokuAppName = 'qa-yapp-cedar';
     }
 
     if (deployTarget === 'prod') {
       ENV.s3.bucket = 'yapp-assets';
-      ENV.redis.url = process.env.REDISTOGO_URL; // optional, falls back to reading from heroku below
+      ENV.redis.url = process.env.REDIS_URL; // optional, falls back to reading from heroku below
       domain = "www.yapp.us";
       herokuAppName = 'yapp-cedar';
     }
@@ -114,8 +114,8 @@ module.exports = {
         if (!ENV.redis.url || ENV.redis.url === '') {
           return new RSVP.Promise(function(resolve, reject){
             var exec = require('child_process').exec;
-            exec('heroku config:get REDISTOGO_URL --app ' + herokuAppName, function (error, stdout, stderr) {
-              ENV.redis.url = stdout.replace(/\n/, '').replace(/\/\/redistogo:/, '//:');
+            exec('heroku config:get REDIS_URL --app ' + herokuAppName, function (error, stdout, stderr) {
+              ENV.redis.url = stdout.replace(/\n/, '');
               resolve(ENV);
             });
           });
