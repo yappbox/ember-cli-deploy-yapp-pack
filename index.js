@@ -97,6 +97,11 @@ module.exports = {
           };
         }
       };
+      ENV.redis.redisOptions = {
+        tls: {
+          rejectUnauthorized: false
+        }
+      };
       ENV.redis.didDeployMessage = function(context) {
         if (context.revisionData.revisionKey && !context.revisionData.activatedRevisionKey) {
           var revisionKey = context.revisionData.revisionKey;
