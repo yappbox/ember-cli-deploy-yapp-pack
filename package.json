@@ -40,9 +40,6 @@
       "commitMessage": "v${version}",
       "pushArgs": "--follow-tags --no-verify"
     },
-    "npm": {
-      "publish": false
-    },
     "github": {
       "release": true
     },
