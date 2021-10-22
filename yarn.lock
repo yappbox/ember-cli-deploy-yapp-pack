@@ -2971,16 +2971,16 @@ ember-cli-deploy-gzip@^2.0.0:
     minimatch "^3.0.4"
     rsvp "^4.8.5"
 
-ember-cli-deploy-lightning-pack@^4.1.0:
-  version "4.1.0"
-  resolved "https://registry.yarnpkg.com/ember-cli-deploy-lightning-pack/-/ember-cli-deploy-lightning-pack-4.1.0.tgz#382f374cc7cd1a762dede6ea70543d6f6f0c40e8"
-  integrity sha512-pbenC9eZbJwHOPeVYHh2h4R92hiedfmLhc0AJgdTvPuzpu0JLj1C9Kyw2HNQNx+QMunfNGEbgFfZuihWJjWKug==
+ember-cli-deploy-lightning-pack@^4.2.0:
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/ember-cli-deploy-lightning-pack/-/ember-cli-deploy-lightning-pack-4.2.0.tgz#1ae53a468dbe480753ef68f59ae014d011f76f74"
+  integrity sha512-vWStlgMWyfKbVt2woO0a3g3kNUeixGRRRBmwFUtLSwGHfhMO93NNz/ZDbr/MA2uUzRoJD0Pn9YEDAs6L+ETxgQ==
   dependencies:
     ember-cli-deploy-build "^2.0.0"
     ember-cli-deploy-display-revisions "^2.1.2"
     ember-cli-deploy-gzip "^2.0.0"
     ember-cli-deploy-manifest "^2.0.0"
-    ember-cli-deploy-redis "^3.0.0"
+    ember-cli-deploy-redis "^3.1.0"
     ember-cli-deploy-revision-data "^1.0.0"
     ember-cli-deploy-s3 "^3.0.0"
 
@@ -3002,10 +3002,10 @@ ember-cli-deploy-plugin@^0.2.1, ember-cli-deploy-plugin@^0.2.2, ember-cli-deploy
     core-object "2.0.6"
     lodash.clonedeep "^4.5.0"
 
-ember-cli-deploy-redis@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/ember-cli-deploy-redis/-/ember-cli-deploy-redis-3.0.0.tgz#1a582d119a2b872580dc4fa97cbec5ba466a6850"
-  integrity sha512-iDRkUdblyg8Af9KxT6mw4kdX/jGeuAo5/bJT0urNnVFx7Y7BGS0is0mlpJjZubS7ae7BQfmwDNNlKfLxAbvnVQ==
+ember-cli-deploy-redis@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/ember-cli-deploy-redis/-/ember-cli-deploy-redis-3.1.0.tgz#9597b9b2eb05406edae182f968872c264272f16e"
+  integrity sha512-EfHxMoenqKSQWvSx1wKVI7JoM0jozabtJP0lkd4V7u43pCVVw/JP7JmOrt+lY6uE6pNfacyfFMgdmlxt3ucfXA==
   dependencies:
     chalk "^4.1.1"
     core-object "^3.1.5"
