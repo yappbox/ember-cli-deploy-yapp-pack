@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-deploy-yapp-pack",
-  "version": "6.2.0",
+  "version": "6.2.1",
   "description": "A pack of ember-cli-deploy plugins for deploying Yapp's Ember apps.",
   "scripts": {
     "lint:js": "eslint .",
