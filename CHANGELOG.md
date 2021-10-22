@@ -1,3 +1,12 @@
+
+## v6.1.0 (2021-10-22)
+
+#### :rocket: Enhancement
+* [#10](https://github.com/yappbox/ember-cli-deploy-yapp-pack/pull/10) Update lightning-pack to get TLS support for Redis ([@lukemelia](https://github.com/lukemelia))
+
+#### Committers: 1
+- Luke Melia ([@lukemelia](https://github.com/lukemelia))
+
 ## v6.0.0 (2021-10-22)
 
 ## v5.0.0 (2020-11-24)
