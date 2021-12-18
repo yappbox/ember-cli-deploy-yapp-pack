@@ -118,11 +118,20 @@ module.exports = {
       if (deployTarget === 'qa' || deployTarget === 'prod') {
         if (!ENV.redis.url || ENV.redis.url === '') {
           return new RSVP.Promise(function(resolve, reject){
-            var exec = require('child_process').exec;
-            exec('heroku config:get REDIS_URL --app ' + herokuAppName, function (error, stdout, stderr) {
-              ENV.redis.url = stdout.replace(/\n/, '');
-              resolve(ENV);
-            });
+            if (process.env.HEROKU_PLATFORM_API_TOKEN) {
+              const Heroku = require('heroku-client');
+              let heroku = new Heroku({ token: process.env.HEROKU_PLATFORM_API_TOKEN });
+              heroku.get(`/apps/${herokuAppName}/config-vars`).then(function(configVars){
+                ENV.redis.url = configVars.REDIS_URL;
+                resolve(ENV);
+              });
+            } else {
+              var exec = require('child_process').exec;
+              exec('heroku config:get REDIS_URL --app ' + herokuAppName, function (error, stdout, stderr) {
+                ENV.redis.url = stdout.replace(/\n/, '');
+                resolve(ENV);
+              });
+            }
           });
         }
       }
