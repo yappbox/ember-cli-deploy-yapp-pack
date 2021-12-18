@@ -1,5 +1,14 @@
 
 
+
+## v6.3.0 (2021-12-18)
+
+#### :rocket: Enhancement
+* [#13](https://github.com/yappbox/ember-cli-deploy-yapp-pack/pull/13) Resolve redis URL via Heroku Platform API when env.REDIS_URL is not defined and env.HEROKU_PLATFORM_API_TOKEN is defined ([@lukemelia](https://github.com/lukemelia))
+
+#### Committers: 1
+- Luke Melia ([@lukemelia](https://github.com/lukemelia))
+
 ## v6.2.1 (2021-10-22)
 
 ## v6.2.0 (2021-10-22)
