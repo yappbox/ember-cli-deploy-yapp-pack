@@ -7,7 +7,7 @@
     "release": "release-it"
   },
   "engines": {
-    "node": ">= 10.*"
+    "node": "14.* || 16.* || 18.* || >= 20.*"
   },
   "devDependencies": {
     "ember-cli": "~3.28.3",
