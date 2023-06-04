@@ -24,8 +24,8 @@
   "license": "MIT",
   "author": "Luke Melia and the Yapp team",
   "dependencies": {
-    "ember-cli-deploy-lightning-pack": "^4.2.2",
-    "ember-cli-deploy-slack": "^1.0.1",
+    "ember-cli-deploy-lightning-pack": "^6.0.0",
+    "ember-cli-deploy-slack": "^2.0.0",
     "heroku-client": "^3.1.0",
     "rsvp": "^4.8.5"
   },
@@ -51,7 +51,7 @@
     }
   },
   "volta": {
-    "node": "14.18.1",
-    "yarn": "1.22.17"
+    "node": "14.21.3",
+    "yarn": "1.22.19"
   }
 }
