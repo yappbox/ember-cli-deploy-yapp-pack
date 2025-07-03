@@ -22,6 +22,12 @@ module.exports = {
       prefix: prefix,
       region: 'us-east-1'
     };
+    ENV['sentry-cli'] = {
+      appName: appName,
+      orgName: 'yapp',
+      authToken: process.env.SENTRY_AUTH_TOKEN,
+      // urlPrefix: '', // if you need prefix for Sentry to catch like ~/assets
+    };
     ENV.slack = {
       webhookURL: process.env.YAPP_SLACK_TECH_CHANNEL_WEBHOOK,
       didDeploy:function(){},
