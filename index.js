@@ -27,6 +27,16 @@ module.exports = {
       didDeploy:function(){},
       didFail:function(){}
     };
+    ENV['sentry-cli'] = {
+      orgName: 'yapp',
+      appName: function(context) {
+        return require(context.project.root + '/package.json').name;
+      },
+      authToken: process.env.SENTRY_AUTH_TOKEN,
+      revisionKey: function(context) {
+        return require(context.project.root + '/package.json').version;
+      }
+    };
     ENV.pipeline = {};
 
     if (VALID_DEPLOY_TARGETS.indexOf(deployTarget) === -1) {
