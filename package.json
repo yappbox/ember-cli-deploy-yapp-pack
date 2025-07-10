@@ -20,12 +20,15 @@
     "ember-addon",
     "ember-cli-deploy-plugin-pack"
   ],
-  "repository": "https://github.com/yappbox/ember-cli-deploy-yapp-pack",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yappbox/ember-cli-deploy-yapp-pack.git"
+  },
   "license": "MIT",
   "author": "Luke Melia and the Yapp team",
   "dependencies": {
     "ember-cli-deploy-lightning-pack": "^6.0.0",
-    "ember-cli-deploy-sentry-cli": "yappbox/ember-cli-deploy-sentry-cli#80ab41a732e17fb0f0a597987766a058fe227674",
+    "ember-cli-deploy-sentry-cli": "github:yappbox/ember-cli-deploy-sentry-cli#80ab41a732e17fb0f0a597987766a058fe227674",
     "ember-cli-deploy-slack": "^2.0.0",
     "heroku-client": "^3.1.0",
     "rsvp": "^4.8.5"
