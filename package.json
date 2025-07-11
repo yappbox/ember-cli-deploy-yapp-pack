@@ -28,7 +28,7 @@
   "author": "Luke Melia and the Yapp team",
   "dependencies": {
     "ember-cli-deploy-lightning-pack": "^6.0.0",
-    "ember-cli-deploy-sentry-cli": "github:yappbox/ember-cli-deploy-sentry-cli#b4ec676bac6b448e2bddf376ea79d2de68c107df",
+    "ember-cli-deploy-sentry-cli": "github:yappbox/ember-cli-deploy-sentry-cli#bd62065c71e5ea9c60845648ab4b2e0ddc69deed",
     "ember-cli-deploy-slack": "^2.0.0",
     "heroku-client": "^3.1.0",
     "rsvp": "^4.8.5"
