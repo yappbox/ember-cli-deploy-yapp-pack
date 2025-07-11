@@ -4229,9 +4229,9 @@ ember-cli-deploy-s3@^4.0.0:
     proxy-agent "^5.0.0"
     rsvp "^4.8.5"
 
-"ember-cli-deploy-sentry-cli@github:yappbox/ember-cli-deploy-sentry-cli#80ab41a732e17fb0f0a597987766a058fe227674":
+"ember-cli-deploy-sentry-cli@github:yappbox/ember-cli-deploy-sentry-cli#b4ec676bac6b448e2bddf376ea79d2de68c107df":
   version "3.1.0"
-  resolved "https://codeload.github.com/yappbox/ember-cli-deploy-sentry-cli/tar.gz/80ab41a732e17fb0f0a597987766a058fe227674"
+  resolved "https://codeload.github.com/yappbox/ember-cli-deploy-sentry-cli/tar.gz/b4ec676bac6b448e2bddf376ea79d2de68c107df"
   dependencies:
     "@sentry/cli" "^2.47.0"
     ember-cli-deploy-plugin "^0.2.9"
