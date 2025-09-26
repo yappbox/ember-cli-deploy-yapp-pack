@@ -1,0 +1,4 @@
+onlyBuiltDependencies:
+  - '@sentry/cli'
+  - aws-sdk
+  - core-js
