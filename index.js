@@ -9,7 +9,8 @@ module.exports = {
       'dev',
       'devindex',
       'qa',
-      'prod'
+      'prod',
+      'preview'
     ];
     var ENV = {};
     ENV.build = {};
@@ -81,10 +82,38 @@ module.exports = {
       herokuAppName = 'yapp-cedar';
     }
 
-    if (deployTarget === 'qa' || deployTarget === 'prod') {
+    if (deployTarget === 'preview') {
+      if (!process.env.PR_NUMBER) {
+        throw new Error('PR_NUMBER env var is required for preview deploys');
+      }
+      if (!process.env.PREVIEW_SHA) {
+        throw new Error('PREVIEW_SHA env var is required for preview deploys');
+      }
+      ENV.s3.bucket = 'yapp-assets';
+      ENV.redis.url = process.env.REDIS_URL; // optional, falls back to reading from heroku below
+      // Pin the revision to the PR HEAD SHA so Rails finds it at <prefix>:index:<sha>.
+      // Without this the redis plugin generates its own random revisionKey, which
+      // would have to be threaded back to the preview:pr-<N> hash; using the SHA
+      // keeps the contract simple.
+      ENV.redis.revisionKey = process.env.PREVIEW_SHA;
+      // Skip activation: previews must not bump <prefix>:index:current. Reviewers
+      // reach them via the preview:pr-<N> hash, written by CI after deploy.
+      domain = "pr-" + process.env.PR_NUMBER + ".preview.yappqa.us";
+      herokuAppName = 'qa-yapp-cedar';
+    }
+
+    if (deployTarget === 'qa' || deployTarget === 'prod' || deployTarget === 'preview') {
       ENV.build.environment = 'production';
       ENV.s3.accessKeyId = process.env.YAPP_AWS_KEY;
       ENV.s3.secretAccessKey = process.env.YAPP_AWS_SECRET;
+      ENV.redis.redisOptions = {
+        tls: {
+          rejectUnauthorized: false
+        }
+      };
+    }
+
+    if (deployTarget === 'qa' || deployTarget === 'prod') {
       ENV.slack.didDeploy = function(context) {
         return function(slack){
           var message;
@@ -107,11 +136,6 @@ module.exports = {
           };
         }
       };
-      ENV.redis.redisOptions = {
-        tls: {
-          rejectUnauthorized: false
-        }
-      };
       ENV.redis.didDeployMessage = function(context) {
         if (context.revisionData.revisionKey && !context.revisionData.activatedRevisionKey) {
           var revisionKey = context.revisionData.revisionKey;
@@ -124,8 +148,17 @@ module.exports = {
       };
     }
 
+    if (deployTarget === 'preview') {
+      ENV.redis.didDeployMessage = function(context) {
+        var revisionKey = context.revisionData.revisionKey;
+        return "Preview deployed for PR #" + process.env.PR_NUMBER + " (revision: " + revisionKey + ").\n"
+             + "URL: https://" + domain + "/" + prefix + "/\n"
+             + "Note: CI must HSET preview:pr-" + process.env.PR_NUMBER + " " + prefix + " " + revisionKey + " for routing to take effect.";
+      };
+    }
+
     return RSVP.resolve().then(function(){
-      if (deployTarget === 'qa' || deployTarget === 'prod') {
+      if (deployTarget === 'qa' || deployTarget === 'prod' || deployTarget === 'preview') {
         if (!ENV.redis.url || ENV.redis.url === '') {
           return new RSVP.Promise(function(resolve, reject){
             if (process.env.HEROKU_PLATFORM_API_TOKEN) {
