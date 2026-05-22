@@ -86,16 +86,12 @@ module.exports = {
       if (!process.env.PR_NUMBER) {
         throw new Error('PR_NUMBER env var is required for preview deploys');
       }
-      if (!process.env.PREVIEW_SHA) {
-        throw new Error('PREVIEW_SHA env var is required for preview deploys');
-      }
       ENV.s3.bucket = 'yapp-assets';
       ENV.redis.url = process.env.REDIS_URL; // optional, falls back to reading from heroku below
-      // Pin the revision to the PR HEAD SHA so Rails finds it at <prefix>:index:<sha>.
-      // Without this the redis plugin generates its own random revisionKey, which
-      // would have to be threaded back to the preview:pr-<N> hash; using the SHA
-      // keeps the contract simple.
-      ENV.redis.revisionKey = process.env.PREVIEW_SHA;
+      // revisionKey is left to the default file-hash data generator, which
+      // computes md5(dist/index.html). This matches QA's shape (32-hex md5)
+      // so Rails' manifest_id regex accepts it. CI is responsible for
+      // mirroring the same md5 into preview:pr-<N> after deploy.
       // Skip activation: previews must not bump <prefix>:index:current. Reviewers
       // reach them via the preview:pr-<N> hash, written by CI after deploy.
       ENV.pipeline.activateOnDeploy = false;
