@@ -98,6 +98,7 @@ module.exports = {
       ENV.redis.revisionKey = process.env.PREVIEW_SHA;
       // Skip activation: previews must not bump <prefix>:index:current. Reviewers
       // reach them via the preview:pr-<N> hash, written by CI after deploy.
+      ENV.pipeline.activateOnDeploy = false;
       domain = "pr-" + process.env.PR_NUMBER + ".preview.yappqa.us";
       herokuAppName = 'qa-yapp-cedar';
     }
