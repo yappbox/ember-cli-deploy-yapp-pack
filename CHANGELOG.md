@@ -2,6 +2,15 @@
 
 
 
+
+## v9.1.1 (2026-05-22)
+
+#### :rocket: Enhancement
+* [#20](https://github.com/yappbox/ember-cli-deploy-yapp-pack/pull/20) Y-1331 Let file-hash generate preview revisionKey ([@lukemelia](https://github.com/lukemelia))
+
+#### Committers: 1
+- Luke Melia ([@lukemelia](https://github.com/lukemelia))
+
 ## v9.1.0 (2026-05-22)
 
 #### :rocket: Enhancement
