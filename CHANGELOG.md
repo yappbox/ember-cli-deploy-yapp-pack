@@ -1,6 +1,15 @@
 
 
 
+
+## v9.1.0 (2026-05-22)
+
+#### :rocket: Enhancement
+* [#19](https://github.com/yappbox/ember-cli-deploy-yapp-pack/pull/19) Add preview deployTarget for per-PR Ember app builds ([@lukemelia](https://github.com/lukemelia))
+
+#### Committers: 1
+- Luke Melia ([@lukemelia](https://github.com/lukemelia))
+
 ## v9.0.0 (2025-09-26)
 
 ## v8.0.2 (2025-07-11)
